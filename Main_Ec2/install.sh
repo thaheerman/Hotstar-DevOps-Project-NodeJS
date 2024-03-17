@@ -72,3 +72,8 @@ sudo service docker start
 #------------------sonar install by using docker---------------
 docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
 #docker run -d --name tomcat -p 8089:8080 tomcat:lts-community
+
+#------------------terraform download----------------------------
+sudo yum install -y yum-utils shadow-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform
